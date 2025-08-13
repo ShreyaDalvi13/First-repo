@@ -1,0 +1,30 @@
+name: Basic Commands
+
+on:
+  push:
+    branches:
+      - main
+
+jobs: 
+  testing:
+    runs-on: ubuntu-latest
+
+    steps:
+      # checkout repositoy code
+      - name: checkout code
+        uses: actions/setup-python@v4
+
+      # set up python
+      - name: set up python
+        uses: actions/setup-python@v5
+        with:
+         python-version: '3.10'
+
+      # Run first python script
+      - name: Run Hello.py 1
+        run: python Hello.py
+      # Run second python script
+      - name: Run Hello.py 2
+        run: python Hello.py
+     
+    
