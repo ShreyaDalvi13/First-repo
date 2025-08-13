@@ -12,7 +12,7 @@ jobs:
     steps:
       # checkout repositoy code
       - name: checkout code
-        uses: actions/setup-python@v4
+        uses: actions/checkout@v4
 
       # set up python
       - name: set up python
